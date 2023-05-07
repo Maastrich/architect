@@ -1,0 +1,54 @@
+{
+  "author": "Maastrich <pinsaultm@gmail.com>",
+  "description": "A CLI version of the architect library",
+  "license": "MIT",
+  "main": "dist/cli.js",
+  "source": "src/cli.ts",
+  "types": "dist/cli.d.ts",
+  "name": "@architect/cli",
+  "repository": "https://github.com/Maastrich/architect",
+  "version": "0.0.1",
+  "bin": {
+    "architect": "bin/run"
+  },
+  "scripts": {
+    "start": "node bin/architect.js",
+    "build": "tsc -b",
+    "watch": "tsc -b -w"
+  },
+  "oclif": {
+    "bin": "architect",
+    "dirname": "architect",
+    "commands": "./dist/commands",
+    "hooks": {
+      "init": [
+        "./dist/hooks/init/gh-status",
+        "./dist/hooks/init/ensure-config",
+        "./dist/hooks/init/overload-config"
+      ]
+    },
+    "plugins": [
+      "@oclif/plugin-autocomplete",
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    }
+  },
+  "dependencies": {
+    "@architect/core": "workspace:*",
+    "@architect/git": "workspace:*",
+    "@oclif/core": "^2.8.5",
+    "@oclif/plugin-autocomplete": "^2.1.9",
+    "@oclif/plugin-help": "^5.2.9",
+    "@oclif/plugin-plugins": "^3.0.1",
+    "yaml": "^2.2.2"
+  },
+  "devDependencies": {
+    "rollup": "*"
+  }
+}

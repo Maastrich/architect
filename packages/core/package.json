@@ -1,0 +1,19 @@
+{
+  "author": "Maastrich <pinsaultm@gmail.com>",
+  "description": "A core version of the architect library",
+  "license": "MIT",
+  "module": "dist/core.mjs",
+  "main": "dist/core.cjs",
+  "source": "src/core.ts",
+  "types": "dist/core.d.ts",
+  "name": "@architect/core",
+  "repository": "https://github.com/Maastrich/architect",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node dist/core.cjs",
+    "build": "rollup -c --bundleConfigAsCjs"
+  },
+  "dependencies": {
+    "rollup": "*"
+  }
+}

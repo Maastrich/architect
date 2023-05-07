@@ -1,0 +1,20 @@
+{
+  "author": "Maastrich <pinsaultm@gmail.com>",
+  "description": "A git version of the architect library",
+  "license": "MIT",
+  "module": "dist/git.mjs",
+  "main": "dist/git.cjs",
+  "source": "src/git.ts",
+  "types": "dist/git.d.ts",
+  "name": "@architect/git",
+  "repository": "https://github.com/Maastrich/architect",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node dist/git.cjs",
+    "build": "rollup -c --bundleConfigAsCjs"
+  },
+  "dependencies": {
+    "rollup": "*",
+    "simple-git": "^3.18.0"
+  }
+}

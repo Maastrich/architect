@@ -1,0 +1,28 @@
+{
+  "name": "@maastrich/architect",
+  "version": "0.0.1",
+  "repository": "https://github.com/Maastrich/architect",
+  "author": "Maastrich <pinsaultm@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "cli:dev": "./packages/cli/bin/dev",
+    "cli:run": "./packages/cli/bin/run",
+    "build": "yarn workspaces foreach -p run build",
+    "test": "yarn workspaces foreach -p run test"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@types/node": "^20.0.0",
+    "babel-cli": "^6.26.0",
+    "rollup": "^3.21.5",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  }
+}
